@@ -1,0 +1,139 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .bgs-1 {
+    padding: 20px;
+    color:white;
+
+  }
+
+  .bgs-1 div {
+    display: flex;
+    align-items: center;
+  }
+
+  .bgs-1 div .text-11{
+    width:70%;
+    margin:50px;
+    display:inline-block;
+    text-align:center;
+    
+  }
+
+  .bgs-1 img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+  }
+
+  .bgs-1 h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  .bgs-1 p {
+    color:white;
+    margin-bottom: 0;
+    font-size:20px;
+  }
+
+  .background-ss {
+    position: relative;
+    background-image: url("/Asset/R.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .background-ss::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7; /* Set opacity to 70% */
+  }
+  
+  .background-ss img {
+    mix-blend-mode: darken;
+  }
+
+  .bgs-2 {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    color: white;
+  }
+
+  .bgs-2 div h1 {
+    font-size: 90px;
+    opacity: 0.6;
+    margin: 50px;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateZ(0);
+  }
+
+  .bgs-2 div h1:hover {
+    opacity: 1;
+  }
+
+  .img-11{
+    margin-right:100px;
+  }
+  .img-11 img{
+    width:500px;
+  }
+
+  .img-11 img {
+    animation: float 2s ease-in-out infinite alternate;
+  }
+
+  .bgs-1 img {
+    animation: float 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+  .text-11 {
+    transition: transform 0.5s ease;
+  }
+  
+  .text-11:hover {
+    transform: scale(1.1);
+  }
+ 
+
+  .text-1 p{
+    transition: transform 0.5s ease;
+  }
+  
+  .text-1 p:hover {
+    transform: scale(1.2);
+  }
+ 

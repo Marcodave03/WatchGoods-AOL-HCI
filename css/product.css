@@ -1,0 +1,98 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+
+/* CSS Styles for the Navbar */
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: black;
+  top: -110px;
+  width: 100%;
+  align-items: center;
+  padding: 10px;
+  transition: top 0.5s ease-in-out;
+  z-index: 9999;
+  /* overflow: hidden;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; 
+}
+
+/* nav home */
+
+.homebar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Add a higher z-index value */
+}
+
+
+nav.show {
+  top: 0;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 30px; /* Adjust the spacing between the menu items */
+}
+
+/* Style for the navigation links */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  margin-top:10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+

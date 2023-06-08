@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatcHGoods</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <nav class="topnav">
+      <div class="logo">
+        <img src="/Asset/image 2.png" alt="">
+      </div>
+      <ul>
+        <li><a href="/html/home.html">Home</a></li>
+        <li><a href="/html/aboutus.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Product</a>
+          <div class="dropdown-content">
+            <a href="Rolex.html">Rolex</a><br>
+            <a href="Omega.html">Omega</a><br>
+            <a href="Jaeger.html">Jaeger</a><br>
+            <a href="Timex.html">Timex</a><br>
+          </div>
+        </li>
+        <li><a href="/html/location.html">Location</a></li>
+        <li><a href="/html/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="bgsst-2"></div>
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="image-container">
+        <img src="/Asset/OIP-removebg-preview 1.png" alt="">
+      </div>
+      <div class="text-container">
+        <h1>CONTACT US</h1>
+        <p>+6223874623746</p>
+        <p>watchgood@gmail.com</p>
+        <p>IG: @WatcH_Goods</p>
+        <p>Line: @watches</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="bgss-2">
+    <form>
+      Full name:
+      <input type="text" name="fullname" id="username" required>
+      <br>
+      Email:
+      <input type="email" name="email" id="email" required>
+      <br>
+      Age:
+      <input type="number" name="age" id="age" required>
+      <br>
+      Country / Region:
+      <select name="country" id="country" required>
+        <option value="s">Select Country</option>
+        <option value="usa">USA</option>
+        <option value="jpn">Japan</option>
+        <option value="idn">Indonesia</option>
+        <option value="ger">Germany</option>
+        <option value="bzl">Brazil</option>
+        <option value="frn">France</option>
+        <option value="aus">Australia</option>
+        <option value="other">Others</option>
+      </select>
+      <br>
+      Message:
+      <textarea rows="4" cols="40" placeholder="Your message" name="message" id="message" required></textarea>
+      <br>
+      <input type="radio" name="status" value="member" id="member" required>Member
+      <input type="radio" name="status" value="guest" id="guest" required>Guest
+      <br>
+      <input type="checkbox" name="agreement" id="agreement" required> I Agree with terms and conditions
+      <br>
+      <label id="error_message" style="color:red"></label>
+      <br>
+      <div class="button-1">
+        <button type="button" onclick="validate()">Submit</button>
+      </div>
+    </form>
+  </section>
+  
+ 
+
+  <footer>
+    <section>
+      <div class="footer-column">
+        <h4>Home</h4>
+        <ul>
+          <li><a href="#">WatcHGoods</a></li>
+          <li><a href="#">Visit Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Vision</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Rolex</a></li>
+          <li><a href="#">Omega</a></li>
+          <li><a href="#">Jaeger Lecoultre</a></li>
+          <li><a href="#">Timex</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Location</h4>
+        <ul>
+          <li><a href="#">Serpong</a></li>
+          <li><a href="#">Alam Sutera</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Form</a></li>
+        </ul>
+      </div>
+    </section>
+    <br><br>
+    <div class="copyright">
+      <div>@2023 |marco davincent|</div>
+      <br>
+      <div>All Rights Reserved</div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+ 
+</body>
+</html>
