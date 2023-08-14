@@ -1,3 +1,6 @@
+/* Nama : Marco Davincent Dermawan
+NIM : 2602177266  */
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -18,6 +21,8 @@
     width:100%;
     height:110px;
   }
+
+  /* navigation */
   
   nav {
     display: flex;
@@ -43,21 +48,10 @@
     width: 100%;
     z-index: 9999; 
   }
-  
-  /* nav home */
-  
-  .homebar {
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999; /* Add a higher z-index value */
-  }
-  
-  
+   
   nav.show {
     top: 0;
   }
-  
   
   ul {
     list-style-type: none;
@@ -66,11 +60,10 @@
     display: flex;
   }
   
-  li {
-    margin-right: 30px; /* Adjust the spacing between the menu items */
+  nav li {
+    margin-right: 30px; 
   }
-  
-  /* Style for the navigation links */
+
   a {
     color: white;
     text-decoration: none;
@@ -97,12 +90,10 @@
     display: block;
   }
 
- 
-
   .video-background {
     position: relative;
     width: 100%;
-    height: 700px; /* Set a fixed height for the container */
+    height: 700px; 
   }
   
   .video-background video {
@@ -119,7 +110,6 @@
     position: relative;
     z-index: 1;
   }
-
 
   .video-background {
     position: relative;
@@ -142,7 +132,6 @@
   .video-background .textt {
     max-width:40%;
     margin-left: 100px;
-
   }
 
   .video-background .textt p {
@@ -158,8 +147,7 @@
     width:70%;
     margin:50px;
     display:inline-block;
-    text-align:center;
-    
+    text-align:center; 
   }
 
   .bgs-1 img {
@@ -179,14 +167,8 @@
     font-size:20px;
   }
 
-  
- 
-
   /* nav home */
 
-  nav.show {
-    top: 0;
-  }
 
   a {
     color: white;
@@ -210,7 +192,12 @@
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
   }
-  
+
+  nav div a::before{
+    background-color:black;
+  }
+
+
   a:hover::before {
     transform: scaleX(1);
   }
@@ -296,8 +283,6 @@
     
   }
 
-
-
   .cardS h1,p{
     color:white;
   }
@@ -366,7 +351,7 @@
     text-align: center;
     width: 100px;
     height: 40px;
-    perspective: 800px; /* Perspective for 3D effect */
+    perspective: 800px; 
   }
   
   #clock .flip-card {
@@ -407,7 +392,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    /* height: 200px; */
     width: 100%;
   }
 
@@ -422,7 +406,6 @@
 
   button {
     display: block;
-    /* margin-bottom: 20px; */
     padding: 10px 20px;
     background-color: white;
     color: black;
@@ -494,7 +477,6 @@
     padding: 20px;
   }
 
-  
   footer {
     background-color: white;
     padding: 30px 0;
@@ -503,27 +485,36 @@
   
   footer section {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap; /* Added property */
+    margin:10px;
+    justify-content: space-between;
   }
   
   footer .footer-column {
     flex: 1;
     margin: 0 10px;
+    text-align:center;  
   }
   
   footer .footer-column h4 {
     font-size: 14px;
     margin-bottom: 10px;
+    text-align:center;
   }
   
   footer .footer-column ul {
     list-style: none;
     padding: 0;
+    text-align:center;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   footer .footer-column ul li {
     margin-bottom: 5px;
+    margin-left:10px;
+    text-align:center;
+    padding: 10px 30px;
   }
   
   footer .footer-column ul li a {
@@ -537,8 +528,6 @@
   footer .footer-column ul li a:hover {
     opacity: 1;
   }
-
-  
  
   footer .copyright {
     display: flex;
@@ -551,101 +540,219 @@
     display: flex;
     justify-content: center;
   }
+
+  .hamburger{
+    display:none;
+    cursor:pointer;
+  }
   
-@media screen and (max-width: 1000px){
-  footer li{
-    display:none;
-  }
-}
-
-@media screen and (max-width: 900px){
-  footer li{
-    display:none;
-  }
-}
-
-@media screen and (max-width: 768px){
-  .card {
-    width: 100%;
-  }
-  footer li{
-    display:none;
-  }
-}
-
-@media screen and (max-width: 735px){
-
-}
-
-@media screen and (max-width: 660px){
-
-}
-
-@media (max-width: 600px) {
-  .hamnav{
+  .bar{
     display:block;
+    width:22px;
+    height:3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:white;
   }
-  ul{
-    position: fixed;
-    width:100%;
-    height:100vh;
+
+  @media screen and (max-width: 800px){
+
+    html{
+      font-size:20px;
+    }
+
+    .hamburger{
+      display:block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+      opacity:0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+      transform:translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .menu{
+      position:absolute;
+      right:-100%;
+      top:100px;
+      gap:0;
+      flex-direction:column;
+      background-color:black;
+      width:100%;
+      text-align:center;
+      transition:0.3s;
+
+    }
+
+    .dropdown-content {
+      position:relative;
+      display: none;
+      background-color: black;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 10px;
+      margin-top:10px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav ul li{
+      margin:16px 0;
+      padding:12px;
+    }
+
+    nav ul.active{
+      right:0;
+    }
+
+    .card {
+      width: 100%;
+    }
+
+    footer li{
+      display:none;
+    }
   }
-  nav ul li{
-    display:block;
-    margin: 50px 0;
-    line-height:30px;
+
+
+/* about us */
+
+.bgs-1 {
+  padding: 20px;
+  color:white;
+}
+
+.bgs-1 div {
+  display: flex;
+  align-items: center;
+}
+
+.bgs-1 div .text-11{
+  width:70%;
+  margin:50px;
+  display:inline-block;
+  text-align:center;
+}
+
+.bgs-1 img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.bgs-1 h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.bgs-1 p {
+  color:white;
+  margin-bottom: 0;
+  font-size:20px;
+}
+
+.background-ss {
+  position: relative;
+  background-image: url("/Asset/R.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.background-ss::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.7; 
+}
+
+.background-ss img {
+  mix-blend-mode: darken;
+}
+
+.bgs-2 {
+  width: 100%;
+  height: auto;
+  margin: 10px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  color: white;
+}
+
+.bgs-2 div h1 {
+  font-size: 90px;
+  opacity: 0.6;
+  margin: 50px;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateZ(0);
+}
+
+.bgs-2 div h1:hover {
+  opacity: 1;
+}
+
+.img-11{
+  margin-right:100px;
+}
+.img-11 img{
+  width:500px;
+}
+
+.img-11 img {
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+.bgs-1 img {
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
   }
-  #check:checked ~ ul{
-    left: 0px;
+  50% {
+    transform: translateY(-15px);
   }
-  .bg-4 div img{
-    width:240px;
-    height:auto;
+  100% {
+    transform: translateY(0);
   }
 }
 
- 
-@media screen and (max-width: 625px){
 
+.text-11 {
+  transition: transform 0.5s ease;
 }
 
-@media screen and (max-width: 540px){
-
-}
- 
-@media screen and (max-width: 414px){
-
-}
-
-@media screen and (max-width: 393px){
-
-}
-
-@media screen and (max-width: 375px){
-  
-}
-
-@media screen and (max-width: 360px){
-
-}
-
-@media screen and (max-width: 280px){
-
+.text-11:hover {
+  transform: scale(1.1);
 }
 
 
+.text-1 p{
+  transition: transform 0.5s ease;
+}
 
-  
-
- 
-
-
-
-
-
-  
-
-  
-
-  
-
+.text-1 p:hover {
+  transform: scale(1.2);
+}

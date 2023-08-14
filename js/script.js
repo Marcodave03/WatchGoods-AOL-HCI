@@ -1,3 +1,6 @@
+// Nama : Marco Davincent Dermawan
+// NIM : 2602177266 
+
 window.addEventListener('scroll', function() {
     var nav = document.querySelector('nav');
     if (window.scrollY > 0) {
@@ -74,9 +77,15 @@ function updateClock() {
   setInterval(updateClock, 1000);
 
 
-  const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("ul");
+const hamburger=document.querySelector(".hamburger");
+const navMenu=document.querySelector(".menu");
 
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-    });
+hamburger.addEventListener("click",()=>{
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n=>n.addEventListener("click",()=>{
+  hamburger.classList.remove("active");
+  hamburger.classList.remove("active");
+}))
